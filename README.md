@@ -1,5 +1,7 @@
-##Oracle SQL Tests
-##Problem Statement
+## Oracle SQL Tests
+
+## Problem Statement
+
 This project demonstrates the setup and management of an Oracle Database system to manage a simple Employee Management System. The system consists of two main tables: Departments and Employees, with a one-to-many relationship between departments and employees. The goal is to execute various SQL operations such as creating tables, inserting data, updating records, performing joins, and managing transactions in Oracle SQL Developer.
 
 Database Setup and Connection
