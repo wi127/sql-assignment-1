@@ -1,4 +1,4 @@
-## Oracle SQL Tests
+### Oracle SQL Tests
 
 ## Problem Statement
 
@@ -8,7 +8,8 @@ Database Setup and Connection
 Oracle Database Installation
 Oracle Database has been installed locally using Oracle Database 19c, and it is accessed through Oracle SQL Developer.
 
-##Connection Configuration
+## Connection Configuration
+
 To connect to the Oracle Database from SQL Developer, the following settings were used:
 
 Connection Name: OracleDB_Local
@@ -22,11 +23,11 @@ Open Oracle SQL Developer.
 Create a new connection using the above details.
 Click Test to verify the connection, then Connect.
 SQL Operations
-1. Create Tables
+## 1. Create Tables
+
 The first step was to create two tables: Departments and Employees, with a foreign key relationship between them.
 
-sql
-Copy code
+
 CREATE TABLE Departments (
     Department_ID NUMBER PRIMARY KEY,
     Department_Name VARCHAR2(100)
@@ -38,53 +39,54 @@ CREATE TABLE Employees (
     Department_ID NUMBER,
     FOREIGN KEY (Department_ID) REFERENCES Departments(Department_ID)
 );
-2. Insert Data
+## 2. Insert Data
+
 Data was inserted into the Departments and Employees tables to populate the database.
 
-sql
-Copy code
 INSERT INTO Departments (Department_ID, Department_Name) VALUES (1, 'HR');
 INSERT INTO Departments (Department_ID, Department_Name) VALUES (2, 'Finance');
 
 INSERT INTO Employees (Employee_ID, Name, Department_ID) VALUES (101, 'John Doe', 1);
 INSERT INTO Employees (Employee_ID, Name, Department_ID) VALUES (102, 'Jane Smith', 2);
-3. Update Data
+
+## 3. Update Data
+
 An update was performed to correct the name of an employee.
 
-sql
-Copy code
 UPDATE Employees SET Name = 'Jane Doe' WHERE Employee_ID = 102;
-4. Delete Data
+## 4. Delete Data
+
 A record was deleted from the Employees table.
 
-sql
-Copy code
 DELETE FROM Employees WHERE Employee_ID = 101;
-5. Join Query
+
+## 5. Join Query
+
 To retrieve related data from both the Departments and Employees tables, an inner join was performed.
 
-sql
-Copy code
 SELECT Employees.Name, Departments.Department_Name
 FROM Employees
 JOIN Departments ON Employees.Department_ID = Departments.Department_ID;
-6. DDL, DML, DCL, and TCL Operations
+
+## 6. DDL, DML, DCL, and TCL Operations
+
 DDL (Data Definition Language): CREATE TABLE, ALTER TABLE, DROP TABLE
 DML (Data Manipulation Language): INSERT, UPDATE, DELETE
 DCL (Data Control Language): GRANT, REVOKE
 TCL (Transaction Control Language): COMMIT, ROLLBACK
-7. Subquery Example
+
+## 7. Subquery Example
 A subquery was used to select employees belonging to the HR department.
 
-sql
-Copy code
+
 SELECT * FROM Employees WHERE Department_ID = 
 (SELECT Department_ID FROM Departments WHERE Department_Name = 'HR');
 SQL Script
 The full SQL script containing the commands above can be found in the file:
 
 sql_test_script.sql
-Screenshots
+## Screenshots
+
 1. Database Connection:
 
 2. SQL Query Execution:
@@ -93,5 +95,6 @@ Screenshots
 A conceptual diagram representing the database structure:
 
 
-Conclusion
+## Conclusion
+
 This project successfully demonstrates the basic SQL operations for managing a database system in Oracle SQL Developer. The system is designed to manage employees and departments, with relationships between the tables established and operations like insertions, updates, deletions, and joins performed to retrieve and manipulate data.
