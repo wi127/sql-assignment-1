@@ -12,17 +12,17 @@ Oracle Database has been installed locally using Oracle Database 19c, and it is 
 
 To connect to the Oracle Database from SQL Developer, the following settings were used:
 
-### Connection Name: OracleDB_Local
-### Username: SYSTEM
-### Password: Romeo
-### stname: localhost
-Port: 1521
-Service Name: orcl
-Connection Steps:
-Open Oracle SQL Developer.
-Create a new connection using the above details.
-Click Test to verify the connection, then Connect.
-SQL Operations
+# Connection Name: SystemAdmin
+# Username: SYSTEM
+# Password: Romeo
+# hostname: localhost
+# Port: 1521
+# Service Name: orcl
+# Connection Steps:
+- Open Oracle SQL Developer.
+- Create a new connection using the above details.
+- Click Test to verify the connection, then Connect.
+- SQL Operations
 ## 1. Create Tables
 
 The first step was to create two tables: Departments and Employees, with a foreign key relationship between them.
