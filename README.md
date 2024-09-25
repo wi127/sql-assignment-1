@@ -12,10 +12,10 @@ Oracle Database has been installed locally using Oracle Database 19c, and it is 
 
 To connect to the Oracle Database from SQL Developer, the following settings were used:
 
-Connection Name: OracleDB_Local
-Username: SYSTEM
-Password: Romeo
-Hostname: localhost
+### Connection Name: OracleDB_Local
+### Username: SYSTEM
+### Password: Romeo
+### stname: localhost
 Port: 1521
 Service Name: orcl
 Connection Steps:
