@@ -27,60 +27,64 @@ To connect to the Oracle Database from SQL Developer, the following settings wer
 
 The first step was to create two tables: Departments and Employees, with a foreign key relationship between them.
 
-
+```bash
 CREATE TABLE Departments (
     Department_ID NUMBER PRIMARY KEY,
     Department_Name VARCHAR2(100)
 );
-
+```
+```bash
 CREATE TABLE Employees (
     Employee_ID NUMBER PRIMARY KEY,
     Name VARCHAR2(100),
     Department_ID NUMBER,
     FOREIGN KEY (Department_ID) REFERENCES Departments(Department_ID)
 );
+```
 ## 2. Insert Data
 
 Data was inserted into the Departments and Employees tables to populate the database.
-
+```bash
 INSERT INTO Departments (Department_ID, Department_Name) VALUES (1, 'HR');
 INSERT INTO Departments (Department_ID, Department_Name) VALUES (2, 'Finance');
 
 INSERT INTO Employees (Employee_ID, Name, Department_ID) VALUES (101, 'John Doe', 1);
 INSERT INTO Employees (Employee_ID, Name, Department_ID) VALUES (102, 'Jane Smith', 2);
 
+```
 ## 3. Update Data
 
 An update was performed to correct the name of an employee.
-
+```bash
 UPDATE Employees SET Name = 'Jane Doe' WHERE Employee_ID = 102;
+```
 ## 4. Delete Data
 
 A record was deleted from the Employees table.
-
+```bash
 DELETE FROM Employees WHERE Employee_ID = 101;
-
+```
 ## 5. Join Query
 
 To retrieve related data from both the Departments and Employees tables, an inner join was performed.
-
+```bash
 SELECT Employees.Name, Departments.Department_Name
 FROM Employees
 JOIN Departments ON Employees.Department_ID = Departments.Department_ID;
-
+```
 ## 6. DDL, DML, DCL, and TCL Operations
 
-DDL (Data Definition Language): CREATE TABLE, ALTER TABLE, DROP TABLE
-DML (Data Manipulation Language): INSERT, UPDATE, DELETE
-DCL (Data Control Language): GRANT, REVOKE
-TCL (Transaction Control Language): COMMIT, ROLLBACK
+- DDL (Data Definition Language): CREATE TABLE, ALTER TABLE, DROP TABLE
+- DML (Data Manipulation Language): INSERT, UPDATE, DELETE
+- DCL (Data Control Language): GRANT, REVOKE
+- TCL (Transaction Control Language): COMMIT, ROLLBACK
 
 ## 7. Subquery Example
 A subquery was used to select employees belonging to the HR department.
-
-
+```bash
 SELECT * FROM Employees WHERE Department_ID = 
 (SELECT Department_ID FROM Departments WHERE Department_Name = 'HR');
+```
 SQL Script
 The full SQL script containing the commands above can be found in the file:
 
