@@ -94,8 +94,11 @@ sql_test_script.sql
 ## Screenshots
 
 1. Database Connection:
+   
+<img width="953" alt="Screenshot 2024-09-25 171528" src="https://github.com/user-attachments/assets/22ee9a13-4dc0-4583-b2c1-c9cb8eed9aa3">
 
 2. SQL Query Execution:
+<img width="960" alt="Screenshot 2024-09-26 090738" src="https://github.com/user-attachments/assets/cbc8695e-3c96-4129-9453-5800cbd4c3e4">
 
 3. Conceptual Diagram:
 A conceptual diagram representing the database structure:
