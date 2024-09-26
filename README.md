@@ -1,4 +1,4 @@
-## Oracle SQL Tests
+## Oracle SQL Assignment 1 
 - Name: NKUSI william
 - ID: 22980 
 
