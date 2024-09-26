@@ -1,5 +1,5 @@
 ## Oracle SQL Tests
-- name: NKUSI william
+- Name: NKUSI william
 - ID: 22980 
 
 ## Problem Statement
@@ -101,6 +101,7 @@ sql_test_script.sql
 <img width="960" alt="Screenshot 2024-09-26 090738" src="https://github.com/user-attachments/assets/cbc8695e-3c96-4129-9453-5800cbd4c3e4">
 
 3. Conceptual Diagram:
+   
 A conceptual diagram representing the database structure:
 
 
